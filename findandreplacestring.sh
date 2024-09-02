@@ -19,7 +19,7 @@ fi
 # iterate over the all .txt files in that directory
 for file in "$DIRECTORY"/*.txt;
  do
-   if [ -f "$file" ]; then
+   if [ -f $file ]; then
     echo "processing file: $file"
     sed -i.bak "s/${FIND_STRING}/${REPLACE_STRING}/g" "$file"  # Use sed to replace the string and save changes in-place
    fi
